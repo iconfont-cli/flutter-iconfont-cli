@@ -80,7 +80,7 @@ npx iconfont-init
 
 
 ### summary_component_name
-就是汇总组件的名称，默认名称为`IconFont`，您也可以改成`Icon`或者您喜欢的名字。记住，它是一个变量名，您必须遵守Javascript中关于变量的语法规则。以及作为组件名，请尽量以大写字母开头。
+就是汇总组件的名称，默认名称为`IconFont`，您也可以改成`Icon`或者您喜欢的名字。记住，它是一个类名，您必须遵守Dart中关于类名的语法规则，请尽量以大写字母开头。
 
 
 # Step 3
