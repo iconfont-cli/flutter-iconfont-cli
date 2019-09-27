@@ -1,5 +1,5 @@
 ## flutter-iconfont-cli
-用纯JS把iconfont.cn的图标转换成React组件，不依赖字体，支持多色彩
+用纯JS把iconfont.cn的图标转换成Flutter Widget，不依赖字体，支持多色彩
 
 ![](https://github.com/fwh1990/flutter-iconfont-cli/blob/master/images/icons.png?raw=true)
 
