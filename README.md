@@ -11,14 +11,6 @@
 <br />
 3、自动化生成图标组件
 
-# 扩展
-|平台|库|
-|----|---|
-|小程序|[mini-program-iconfont-cli](https://github.com/iconfont-cli/mini-program-iconfont-cli)|
-|Taro|[taro-iconfont-cli](https://github.com/iconfont-cli/taro-iconfont-cli)|
-|React H5|[react-iconfont-cli](https://github.com/iconfont-cli/react-iconfont-cli)|
-|React Native|[react-native-iconfont-cli](https://github.com/iconfont-cli/react-native-iconfont-cli)|
-
 ## Step 1
 安装全局插件
 ```bash
@@ -133,6 +125,14 @@ IconFont(IconNames.alipay, colors: ['green', 'orange']);
 # 修改 symbol_url 配置后执行：
 npx iconfont-flutter
 ```
+
+# 扩展
+|平台|库|
+|----|---|
+|小程序|[mini-program-iconfont-cli](https://github.com/iconfont-cli/mini-program-iconfont-cli)|
+|Taro|[taro-iconfont-cli](https://github.com/iconfont-cli/taro-iconfont-cli)|
+|React H5|[react-iconfont-cli](https://github.com/iconfont-cli/react-iconfont-cli)|
+|React Native|[react-native-iconfont-cli](https://github.com/iconfont-cli/react-native-iconfont-cli)|
 
 --------
 
