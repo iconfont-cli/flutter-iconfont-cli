@@ -1,0 +1,42 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_svg/svg.dart';
+
+enum IconNames {
+  #names#
+}
+
+class #SummaryIcon# extends StatelessWidget {
+  final IconNames name;
+  final String color;
+  final List<String> colors;
+  final double size;
+
+  #SummaryIcon#(this.name, { this.size = #size#, this.color, this.colors });
+
+  static String getColor(int arrayIndex, String color, List<String> colors, String defaultColor) {
+    if (color != null && color.isNotEmpty) {
+      return color;
+    }
+
+    if (colors != null && colors.isNotEmpty && colors.length > arrayIndex) {
+      return colors.elementAt(arrayIndex);
+    }
+
+    return defaultColor;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    String svgXml;
+
+    switch (this.name) {
+#cases#
+    }
+
+    if (svgXml == null) {
+      return new Container(width: 0, height: 0);
+    }
+
+    return SvgPicture.string(svgXml, width: this.size, height: this.size);
+  }
+}
