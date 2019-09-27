@@ -16,7 +16,7 @@
   "bin": {
     "iconfont": "./commands/help.js",
     "iconfont-init": "./commands/createJson.js",
-    "iconfont-h5": "./commands/createIcon.js"
+    "iconfont-flutter": "./commands/createIcon.js"
   },
   "peerDependencies": {},
   "dependencies": {
