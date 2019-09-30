@@ -12,14 +12,6 @@
 3、自动化生成图标组件
 
 ## Step 1
-安装全局插件
-```bash
-# Yarn
-yarn global add flutter-iconfont-cli
-
-# Npm
-npm install flutter-iconfont-cli -g
-```
 
 在项目文件`pubspec.yml`中加入flutter插件 `flutter_svg`
 ```yaml
@@ -35,6 +27,11 @@ npm install flutter-iconfont-cli -g
 然后执行flutter插件安装操作
 ```bash
 flutter packages get
+```
+
+接着安装全局插件（基于nodeJs）
+```bash
+npm install flutter-iconfont-cli -g
 ```
 
 # Step 2
