@@ -81,7 +81,7 @@ npx iconfont-flutter
 
 -----------
 
-现在，你可以参考[snapshots目录](https://github.com/fwh1990/flutter-iconfont-cli/tree/master/snapshots)的快照文件。
+现在，你可以参考[snapshots目录](https://github.com/iconfont-cli/flutter-iconfont-cli/tree/master/snapshots)的快照文件。
 
 # 使用
 
