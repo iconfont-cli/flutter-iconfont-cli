@@ -4,7 +4,7 @@ import mkdirp from 'mkdirp';
 import glob from 'glob';
 import colors from 'colors';
 import { snakeCase } from 'lodash';
-import { XmlData } from './fetchXml';
+import { XmlData } from 'iconfont-parser';
 import { Config } from './getConfig';
 import { getTemplate } from './getTemplate';
 import {
