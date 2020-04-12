@@ -130,6 +130,7 @@ npx iconfont-flutter
 |Taro|[taro-iconfont-cli](https://github.com/iconfont-cli/taro-iconfont-cli)|
 |React H5|[react-iconfont-cli](https://github.com/iconfont-cli/react-iconfont-cli)|
 |React Native|[react-native-iconfont-cli](https://github.com/iconfont-cli/react-native-iconfont-cli)|
+|Remax|[remax-iconfont-cli](https://github.com/iconfont-cli/remax-iconfont-cli)|
 
 --------
 
