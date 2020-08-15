@@ -20,7 +20,7 @@
 
   dependencies:
     # 版本号请以官方库的为准：https://github.com/dnfield/flutter_svg/tags
-    flutter_svg: ^0.14.1
+    flutter_svg: ^0.18.0
   ...
 }
 ```
