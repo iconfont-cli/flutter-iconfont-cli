@@ -5,13 +5,13 @@ enum IconNames {
   alipay, user, setup
 }
 
-class Icon extends StatelessWidget {
+class IconFont extends StatelessWidget {
   final IconNames name;
   final String color;
   final List<String> colors;
   final double size;
 
-  Icon(this.name, { this.size = 14, this.color, this.colors });
+  IconFont(this.name, { this.size = 14, this.color, this.colors });
 
   static String getColor(int arrayIndex, String color, List<String> colors, String defaultColor) {
     if (color != null && color.isNotEmpty) {

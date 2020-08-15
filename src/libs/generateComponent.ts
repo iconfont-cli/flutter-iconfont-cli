@@ -11,7 +11,6 @@ import {
   replaceCases,
   replaceNames,
   replaceSize,
-  replaceSummaryIcon,
 } from './replace';
 import { whitespace } from './whitespace';
 
@@ -43,9 +42,8 @@ export const generateComponent = (data: XmlData, config: Config) => {
   iconFile = replaceSize(iconFile, config.default_icon_size);
   iconFile = replaceCases(iconFile, cases);
   iconFile = replaceNames(iconFile, names);
-  iconFile = replaceSummaryIcon(iconFile, config.summary_component_name);
 
-  fs.writeFileSync(path.join(saveDir, config.summary_component_name + '.dart'), iconFile);
+  fs.writeFileSync(path.join(saveDir, 'IconFont.dart'), iconFile);
 
   console.log(`\n${colors.green('√')} All icons have putted into dir: ${colors.green(config.save_dir)}\n`);
 };

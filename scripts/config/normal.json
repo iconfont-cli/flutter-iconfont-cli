@@ -1,7 +1,6 @@
 {
   "symbol_url": "http://at.alicdn.com/t/font_1373348_ghk94ooopqr.js",
-  "save_dir": "./snapshots/normal",
+  "save_dir": "./snapshots",
   "trim_icon_prefix": "icon",
-  "default_icon_size": 14,
-  "summary_component_name": "Icon"
+  "default_icon_size": 14
 }

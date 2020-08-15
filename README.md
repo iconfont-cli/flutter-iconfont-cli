@@ -45,8 +45,7 @@ npx iconfont-init
     "symbol_url": "请参考README.md，复制官网提供的JS链接",
     "save_dir": "./lib/iconfont",
     "trim_icon_prefix": "icon",
-    "default_icon_size": 18,
-    "summary_component_name": "IconFont"
+    "default_icon_size": 18
 }
 ```
 ### 配置参数说明：
@@ -65,12 +64,7 @@ npx iconfont-init
 如果你的图标有通用的前缀，而你在使用的时候又不想重复去写，那么可以通过这种配置这个选项把前缀统一去掉。
 
 ### default_icon_size
-我们将为每个生成的图标组件加入默认的字体大小，当然，你也可以通过传入props的方式改变这个size值。
-
-
-### summary_component_name
-就是汇总组件的名称，默认名称为`IconFont`，您也可以改成`Icon`或者您喜欢的名字。记住，它是一个类名，您必须遵守Dart中关于类名的语法规则，请尽量以大写字母开头。
-
+我们将为每个生成的图标组件加入默认的字体大小，当然，你也可以通过传入props的方式改变这个size值
 
 # Step 3
 开始生成React标准组件

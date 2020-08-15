@@ -9,7 +9,3 @@ export const replaceCases = (content: string, cases: string) => {
 export const replaceNames = (content: string, names: string[]) => {
   return content.replace(/#names#/g, names.join(', '));
 };
-
-export const replaceSummaryIcon = (content: string, iconName: string) => {
-  return content.replace(/#SummaryIcon#/g, iconName);
-};
