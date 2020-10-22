@@ -5,13 +5,45 @@ enum IconNames {
   alipay, user, setup
 }
 
+/**
+ * A class includes all icons which you provided from https://iconfont.cn
+ *
+ * How to use it:
+ * ```dart
+ * IconFont(IconNames.xxx);
+ * IconFont(IconNames.xxx, color: '#f00');
+ * IconFont(IconNames.xxx, colors: ['#f00', 'blue']);
+ * IconFont(IconNames.xxx, size: 30, color: '#000');
+ * ```
+ *
+ * The name is dynamic to against server interface.
+ * Feel free to input string literal.
+ * ```dart
+ * IconFont('xxx');
+ * ```
+ */
 class IconFont extends StatelessWidget {
-  final IconNames name;
+  IconNames name;
   final String color;
   final List<String> colors;
   final double size;
 
-  IconFont(this.name, { this.size = 14, this.color, this.colors });
+  IconFont(dynamic iconName, { this.size = 14, this.color, this.colors }) {
+    switch (iconName) {
+      case 'alipay':
+        iconName = IconNames.alipay;
+        break;
+      case 'user':
+        iconName = IconNames.user;
+        break;
+      case 'setup':
+        iconName = IconNames.setup;
+        break;
+
+    }
+
+    this.name = iconName;
+  }
 
   static String getColor(int arrayIndex, String color, List<String> colors, String defaultColor) {
     if (color != null && color.isNotEmpty) {

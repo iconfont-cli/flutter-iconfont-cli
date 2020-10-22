@@ -9,6 +9,7 @@ import { Config } from './getConfig';
 import { getTemplate } from './getTemplate';
 import {
   replaceCases,
+  replaceConvertCases,
   replaceNames,
   replaceSize,
 } from './replace';
@@ -20,6 +21,7 @@ export const generateComponent = (data: XmlData, config: Config) => {
   const names: string[] = [];
   const saveDir = path.resolve(config.save_dir);
   let cases: string = '';
+  let stringToEnumCases = '';
 
   mkdirp.sync(saveDir);
   glob.sync(path.join(saveDir, '*')).forEach((file) => fs.unlinkSync(file));
@@ -35,15 +37,20 @@ export const generateComponent = (data: XmlData, config: Config) => {
     cases += `${whitespace(6)}case IconNames.${iconIdAfterTrim}:\n`;
     cases += `${whitespace(8)}svgXml = '''${generateCase(item, 10)}${whitespace(8)}''';\n`;
     cases += `${whitespace(8)}break;\n`;
+
+    stringToEnumCases += `${whitespace(6)}case '${iconIdAfterTrim}':\n`;
+    stringToEnumCases += `${whitespace(8)}iconName = IconNames.${iconIdAfterTrim};\n`;
+    stringToEnumCases += `${whitespace(8)}break;\n`;
   });
 
   let iconFile =  getTemplate('Icon.dart');
 
   iconFile = replaceSize(iconFile, config.default_icon_size);
   iconFile = replaceCases(iconFile, cases);
+  iconFile = replaceConvertCases(iconFile, stringToEnumCases);
   iconFile = replaceNames(iconFile, names);
 
-  fs.writeFileSync(path.join(saveDir, 'IconFont.dart'), iconFile);
+  fs.writeFileSync(path.join(saveDir, 'icon_font.dart'), iconFile);
 
   console.log(`\n${colors.green('√')} All icons have putted into dir: ${colors.green(config.save_dir)}\n`);
 };
