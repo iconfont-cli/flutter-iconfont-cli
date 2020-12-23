@@ -28,9 +28,14 @@ export const generateComponent = (data: XmlData, config: Config) => {
 
   data.svg.symbol.forEach((item) => {
     const iconId = item.$.id;
-    const iconIdAfterTrim = snakeCase(config.trim_icon_prefix
+    let iconIdAfterTrim = snakeCase(config.trim_icon_prefix
       ? iconId.replace(new RegExp(`^${config.trim_icon_prefix}(.+?)$`), '$1')
       : iconId);
+
+    // dart enum doesn't support keyword with digit prefix
+    if (/^\d/.test(iconIdAfterTrim)) {
+      iconIdAfterTrim = '_' + iconIdAfterTrim;
+    }
 
     names.push(iconIdAfterTrim);
 
