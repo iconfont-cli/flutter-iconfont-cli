@@ -19,8 +19,8 @@
   ...
 
   dependencies:
-    # 版本号请以官方库的为准：https://github.com/dnfield/flutter_svg/tags
-    flutter_svg: ^0.18.0
+    # 版本号请以官方库的为准：https://pub.dev/packages/flutter_svg
+    flutter_svg: ^0.19.3
   ...
 }
 ```
@@ -45,7 +45,8 @@ npx iconfont-init
     "symbol_url": "请参考README.md，复制官网提供的JS链接",
     "save_dir": "./lib/iconfont",
     "trim_icon_prefix": "icon",
-    "default_icon_size": 18
+    "default_icon_size": 18,
+    "null_safety": true
 }
 ```
 ### 配置参数说明：
@@ -65,6 +66,14 @@ npx iconfont-init
 
 ### default_icon_size
 我们将为每个生成的图标组件加入默认的字体大小，当然，你也可以通过传入props的方式改变这个size值
+
+### null_safety
+dart 2.12.0 开始支持的空安全特性，开启该参数后，生成的语法会有所变化，所以需要变更sdk以保证语法能被识别。
+```diff
+environment:
+- sdk: ">=2.7.0 <3.0.0"
++ sdk: ">=2.12.0 <3.0.0"
+```
 
 # Step 3
 开始生成React标准组件

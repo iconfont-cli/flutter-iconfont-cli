@@ -4,3 +4,5 @@ node_modules/
 build/
 /iconfont.json
 .DS_Store
+.dart_tool/
+.packages

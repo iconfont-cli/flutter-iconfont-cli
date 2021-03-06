@@ -48,7 +48,7 @@ export const generateComponent = (data: XmlData, config: Config) => {
     stringToEnumCases += `${whitespace(8)}break;\n`;
   });
 
-  let iconFile =  getTemplate('Icon.dart');
+  let iconFile =  getTemplate(config.null_safety ? 'Icon.null.safety.dart' : 'Icon.dart');
 
   iconFile = replaceSize(iconFile, config.default_icon_size);
   iconFile = replaceCases(iconFile, cases);

@@ -8,6 +8,7 @@ export interface Config {
   save_dir: string;
   trim_icon_prefix: string;
   default_icon_size: number;
+  null_safety: boolean;
 }
 
 let cacheConfig: Config;
@@ -33,6 +34,10 @@ export const getConfig = () => {
 
   if (config.symbol_url.indexOf('//') === 0) {
     config.symbol_url = 'http:' + config.symbol_url;
+  }
+
+  if (config.null_safety === undefined) {
+    config.null_safety = false;
   }
 
   config.save_dir = config.save_dir || defaultConfig.save_dir;
