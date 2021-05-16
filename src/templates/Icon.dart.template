@@ -5,6 +5,10 @@ enum IconNames {
   #names#
 }
 
+extension parseString on IconNames {
+  String serialize() => this.toString().split('.').last;
+}
+
 /// A class includes all icons which you provided from https://iconfont.cn
 ///
 /// How to use it:
@@ -27,11 +31,14 @@ class IconFont extends StatelessWidget {
   final double size;
 
   IconFont(dynamic iconName, { this.size = #size#, this.color, this.colors }) {
+    this.name = getIconNames(iconName);
+  }
+
+  static IconNames getIconNames(dynamic iconName) {
     switch (iconName) {
 #convertCases#
     }
-
-    this.name = iconName;
+    return iconName;
   }
 
   static String getColor(int arrayIndex, String color, List<String> colors, String defaultColor) {
