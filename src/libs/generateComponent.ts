@@ -100,12 +100,15 @@ const addAttribute = (domName: string, sub: XmlData['svg']['symbol'][number]['pa
       // Set default color same as in iconfont.cn
       // And create placeholder to inject color by user's behavior
       sub.$.fill = sub.$.fill || '#333333';
+      sub.$['fill-opacity'] = sub.$['fill-opacity'] || 1;
     }
 
     for (const attributeName of Object.keys(sub.$)) {
       if (attributeName === 'fill') {
         template += `\n${whitespace(counter.baseIdent + 4)}${attributeName}="''' + getColor(${counter.colorIndex}, color, colors, '${sub.$[attributeName]}') + '''"`;
         counter.colorIndex += 1;
+      } else if (attributeName === 'fill-opacity') {
+        template += `\n${whitespace(counter.baseIdent + 4)}${attributeName}=$opacity`;
       } else {
         template += `\n${whitespace(counter.baseIdent + 4)}${attributeName}="${sub.$[attributeName]}"`;
       }
