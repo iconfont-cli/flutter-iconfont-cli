@@ -29,8 +29,8 @@ class IconFont extends StatelessWidget {
   final String? color;
   final List<String>? colors;
   final double size;
-
-  IconFont(dynamic iconName, { this.size = #size#, this.color, this.colors }) {
+  final double? opacity;
+  IconFont(dynamic iconName, { this.size = #size#, this.color, this.colors, this.opacity = 1 }) {
     this.name = getIconNames(iconName);
   }
 
