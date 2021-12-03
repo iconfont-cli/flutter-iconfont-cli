@@ -108,7 +108,7 @@ const addAttribute = (domName: string, sub: XmlData['svg']['symbol'][number]['pa
         template += `\n${whitespace(counter.baseIdent + 4)}${attributeName}="''' + getColor(${counter.colorIndex}, color, colors, '${sub.$[attributeName]}') + '''"`;
         counter.colorIndex += 1;
       } else if (attributeName === 'fill-opacity') {
-        template += `\n${whitespace(counter.baseIdent + 4)}${attributeName}=$opacity`;
+        template += `\n${whitespace(counter.baseIdent + 4)}${attributeName}="$opacity"`;
       } else {
         template += `\n${whitespace(counter.baseIdent + 4)}${attributeName}="${sub.$[attributeName]}"`;
       }
